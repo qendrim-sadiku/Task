@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": "5",
+      "firstName": "1234",
+      "LastName": "1"
+    },
+    {
+      "id": "6",
+      "firstName": "test",
+      "LastName": "test"
+    },
+    {
+      "id": 1,
+      "firstName": "Test",
+      "LastName": "21"
+    },
+    {
+      "id": 12,
+      "firstName": "Test",
+      "LastName": "Best"
+    }
+  ]
+}

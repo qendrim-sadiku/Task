@@ -1,0 +1,29 @@
+<div class="button-row">
+  <a mat-raised-button color="primary" (click)="bookDetails()"><mat-icon>show</mat-icon></a>
+</div>
+<form [formGroup]="bookForm" (ngSubmit)="onFormSubmit(bookForm.value)">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="ISBN" formControlName="id"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!bookForm.get('id').valid && bookForm.get('id').touched">Please enter ISBN</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Title" formControlName="firstName"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!bookForm.get('firstName').valid && bookForm.get('firstName').touched">Please enter Book Title</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Author" formControlName="LastName"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!bookForm.get('LastName').valid && bookForm.get('LastName').touched">Please enter Book Author</span>
+    </mat-error>
+  </mat-form-field>
+  <div class="button-row">
+    <button type="submit" [disabled]="!bookForm.valid" mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
+  </div>
+</form>
